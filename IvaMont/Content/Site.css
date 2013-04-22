@@ -1,0 +1,258 @@
+﻿html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	/*font: inherit;*/
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/*~reset css*/
+body {
+    background-color: #4c4c4c;
+}
+header {
+    margin:auto;
+    width:1024px;
+    height:222px;
+    background: url('/Content/images/siteImages/headerBackground.gif');
+}
+
+#content {
+    margin:auto;
+    width:1024px;
+}
+
+footer {
+      margin:auto;
+      width:1024px;
+      height:45px;
+      background: url('/Content/images/siteImages/footerBackground.png');
+}
+
+#homeContent {
+      width:1024px;
+      height:501px;
+      background: url('/Content/images/siteImages/contentHomepage.png');
+}
+
+#homeProducts {
+    position:relative;
+    float:left;
+    width:248px;
+    height:263px;
+    top: 130px;
+    left: 199px;
+}
+#homeProducts_title {
+    position:absolute;
+    width: 248px;
+    height: 60px;
+    color:white;
+}
+
+#homeProducts_items {
+    position: absolute;
+    margin-top: 61px;
+    height: 201px;
+    width: 248px;
+}
+
+    #homeProducts_title a {
+        margin-top: 20px;
+        margin-left: 75px;
+        display: block;
+        color:white;
+        text-decoration:none;
+        font-size:23px;
+    }
+        #homeProducts_title a:hover {
+            color:red;
+        }
+#homeServices {
+    position:relative;
+    float:left;
+    width:248px;
+    height:263px;
+    top: 130px;
+    left: 309px;
+}
+
+#homeServices_title {
+    position:absolute;
+    width: 248px;
+    height: 60px;
+    color:white;
+}
+
+#homeServices_description {
+    position: absolute;
+    margin-top: 61px;
+    height: 201px;
+    width: 248px;
+}
+
+#homeServices_title a {
+        margin-top: 24px;
+        margin-left: 75px;
+        display: block;
+        color:white;
+        text-decoration:none;
+        font-size:23px;
+}
+        #homeServices_title a:hover {
+            color:red;
+        }
+#logo {
+    float:left;
+    height:222px;
+    width:222px;
+}
+
+#menu {
+    width:390px;
+    height:219px;
+    float:right;
+}
+
+#menu_head {
+    width:390px;
+    height:70px;
+}
+
+#menu_bottom {
+    width:390px;
+    height:152px;
+}
+
+#menu_list {
+    position: relative;
+    top: 70px;
+    left: 40px;
+    color:white;
+}
+
+    #menu_list li {
+        display:inline;
+        float:left
+        
+    }
+        #menu_list li a {
+        color:white;
+        text-decoration:none;
+        
+        }
+        #menu_list li a:hover {
+        color:white;
+        text-decoration:none;
+        color:red;
+        }
+
+#design_info {
+    position:relative;
+    top: 25px;
+    float: right;
+    right: 31px;
+    font-family:Helvetica;
+    font-size:14px;
+}
+    #design_info a {
+     color:white;
+     text-decoration:none;
+    }
+
+
+
+
+
+    /*Tomiiiiii*/
+
+    /*Products da se dodade visina za naredni produkti*/
+
+#product {
+    width:1024px;
+    height:501px;
+    margin: 90px 0px 0px 0px;
+}
+
+
+.imgOutside
+  {
+    width: 316px;
+    height: 360px;
+    float: left;
+    border: 3px solid #717171;
+    background: #4c4c4c;
+    margin-left: 20px;
+    /*/*border-radius:25px;*/
+  }
+.imgInside
+  {
+    width: 271px;
+    height: 261px;
+    float: left;
+    border: 2px solid #717171;
+    background: #4c4c4c;
+    margin: 20px 19px 0px;
+  }
+.imgInside:hover
+  {
+  border:2px solid #ff0000;
+  }
+.desc
+  {
+  text-align:center;
+  width:300px;
+  color:white;
+  margin-top: 22px;
+  font-size:17px;
+  }
+
+
+/*Product description*/
+
+#prduct_maindiv {
+     width:984px;
+    height:480px;
+    margin: 90px 0px 0px 0px;
+     border: 3px solid #717171;
+    background: #4c4c4c;
+}
+#prduct_descdiv {
+}
+#prduct_imgdiv {
+}

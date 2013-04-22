@@ -1,0 +1,38 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" href="@Url.Content("~/Content/Site.css")" type="text/css" />
+    <title>IvaMont</title>
+</head>
+<body>
+    <header>
+        <a id="logo" href="/Site/Home";></a>
+        <div id="menu">
+            <div id="menu_head">
+                 <ul id="menu_list" style="top:29px;left:192px">
+                      <li style="width:80px;"><a style="margin-left:15px" href="/Site/About";>За нас</a></li>
+                     <li style="width:80px;"><a style="margin-left:15px" href="/Site/Contact";>Контакт</a></li>
+                 </ul>
+            </div>
+            <div id="menu_bottom">
+                <ul id="menu_list">
+                    <li style="width:80px;"><a style="margin-left:15px" href="/Site/Home";>Дома</a></li>
+                    <li style="width:100px"><a style="margin-left: 10px;" href="/Site/Products";>Производи</a></li>
+                     <li style="width:60px"><a style="margin-left: 6px;" href="/Site/Services";>Услуги</a></li>
+                     <li ><a style="margin-left: 15px;" href="/Site/Clients";>Клиенти</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <div id="content">
+         @RenderBody()
+     </div>
+    <footer>
+       <div id="design_info">
+           <a href="http://ilogic.mk/" rel="nofollow" target="_blank">Дизајн и функционалност <span style="color:red">i</span>Logic</a>
+       </div>
+    </footer>
+</body>
+</html>

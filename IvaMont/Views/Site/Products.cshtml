@@ -1,0 +1,56 @@
+﻿@{
+    ViewBag.Title = "Products";
+    Layout = "~/Views/Shared/SiteMaster.cshtml";
+}
+
+<div id="product">
+
+    <div class="imgOutside">
+         <a href="">
+        <div class="imgInside">
+                <img src="/Content/images/products/Proizvod_1.png" style="margin-left: 64px;"> 
+        </div>
+        </a>   
+         <div style="clear:both"></div>
+          <div class="desc"><p>Топловоден електричен котел</p>
+        <img src="/Content/images/products/product_footer.png" style="margin-left: 6px;margin-top: 16px;">
+              </div>
+    </div>
+    <div class="imgOutside">
+        <a href="">
+        <div class="imgInside">
+                <img src="/Content/images/products/Proizvod_2.png" >
+        </div>
+        </a>
+         <div style="clear:both"></div>
+        <div class="desc"><p>Топловоден електричен котел</p>
+        <img src="/Content/images/products/product_footer.png" style="margin-left: 6px;margin-top: 16px;">
+            </div>
+    </div>
+    <div class="imgOutside">
+    
+        <div class="imgInside" onclick="productDetails('kokiii')">
+                <img src="/Content/images/products/Proizvod_3.png" style="margin-left: 64px;">
+        </div>
+      
+        <div style="clear:both"></div>
+        <div class="desc"><p>Топловоден електричен котел</p>
+        <img src="/Content/images/products/product_footer.png" style="margin-left: 6px;margin-top: 16px;">
+           </div>
+    </div>
+</div>
+
+<script type="text/javascript">
+        function productDetails(e) {
+            $('#product').empty();
+            $('#product').append('<div id="prduct_desc"><div>tomi</div></div>');
+                //('<div style=" width:1024px;height:480px;margin: 90px 0px 0px 0px;border: 3px solid #717171;background: #4c4c4c;"></div>');
+
+            $('#product').append(e);
+            if (e == 'kokiii') {
+                $('#koki').append('<div style="width:100px;height:100px;background-color:white;"></div>');
+            }
+           
+        }
+
+</script>

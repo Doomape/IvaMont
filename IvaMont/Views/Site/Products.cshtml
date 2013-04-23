@@ -6,22 +6,21 @@
 <div id="product">
 
     <div class="imgOutside">
-         <a href="">
-        <div class="imgInside">
+
+        <div class="imgInside" onclick="productDetails('Proizvod1')">
                 <img src="/Content/images/products/Proizvod_1.png" style="margin-left: 64px;"> 
         </div>
-        </a>   
+ 
          <div style="clear:both"></div>
           <div class="desc"><p>Топловоден електричен котел</p>
         <img src="/Content/images/products/product_footer.png" style="margin-left: 6px;margin-top: 16px;">
               </div>
     </div>
     <div class="imgOutside">
-        <a href="">
-        <div class="imgInside" onclick="productDetails('tomi')">
+        <div class="imgInside" onclick="productDetails('Proizvod2')">
                 <img src="/Content/images/products/Proizvod_2.png" >
         </div>
-        </a>
+
          <div style="clear:both"></div>
         <div class="desc"><p>Топловоден електричен котел</p>
         <img src="/Content/images/products/product_footer.png" style="margin-left: 6px;margin-top: 16px;">
@@ -29,7 +28,7 @@
     </div>
     <div class="imgOutside">
     
-        <div class="imgInside" onclick="productDetails('kokiii')">
+        <div class="imgInside" onclick="productDetails('Proizvod3')">
                 <img src="/Content/images/products/Proizvod_3.png" style="margin-left: 64px;">
         </div>
       
@@ -43,10 +42,31 @@
 <script type="text/javascript">
         function productDetails(e) {
             $('#product').empty();
-            $('#product').append('<div id="prduct_maindiv"><div>tomi</div></div>');
-            $('#product').append(e);
-            if (e == 'kokiii') {
-                $('#koki').append('<div style="width:100px;height:100px;background-color:white;"></div>');
+            var pom = "<div id='prduct_maindiv'><div id='prduct_descdiv'></div><div id='product_middle_line'></div><div id='prduct_imgdiv'><div id='prduct_thumbdiv'></div></div>"
+            +"</div>";
+            $('#product').append(pom);
+            if (e == 'Proizvod1') {
+                $('#prduct_imgdiv').append('<img src="/Content/images/products/main/Proizvod_1.png"/ style="margin: 30px 0px 0px 101px;">');
+                $('#prduct_descdiv').append('<p>The highest quantity. Of the highest quality.The App Store has the world’s largest collection of mobile apps. But it’s not just the number that’s impressive. It’s the kinds of apps you’ll find. iPhone apps offer a better experience because they take advantage of the technologies built into the device. And all those apps are in one place, so they’re easy to access, easy to search, +'
+                  + ' and easy to download — using the same Apple ID account you use on iTunes.</p>');
+                $('#prduct_thumbdiv').append('<img src="/Content/images/products/thumbs/Proizvod_1.1.png"/class="thumbs">');
+                $('#prduct_thumbdiv').append('<img src="/Content/images/products/thumbs/Proizvod_1.2.png"/class="thumbs" style="margin-left:38px;">');
+                $('#prduct_thumbdiv').append('<img src="/Content/images/products/thumbs/Proizvod_1.3.png"/class="thumbs" style="margin-left:38px;">');
+            }
+            if (e == 'Proizvod2') {
+                $('#prduct_imgdiv').append('<img src="/Content/images/products/main/Proizvod_2.png"/ style="margin: 30px 0px 0px 27px;">');
+                $('#prduct_descdiv').append('<p>The highest quantity. Of the highest quality.The App Store has the world’s largest collection of mobile apps. But it’s not just the number that’s impressive. It’s the kinds of apps you’ll find. iPhone apps offer a better experience because they take advantage of the technologies built into the device. And all those apps are in one place, so they’re easy to access, easy to search, +'
+                  + ' and easy to download — using the same Apple ID account you use on iTunes.</p>');
+                $('#prduct_thumbdiv').append('<img src="/Content/images/products/thumbs/Proizvod_2.1.png"/class="thumbs">');
+                $('#prduct_thumbdiv').append('<img src="/Content/images/products/thumbs/Proizvod_2.2.png"/class="thumbs" style="margin-left:38px;">');
+            }
+            if (e == 'Proizvod3') {
+                $('#prduct_imgdiv').append('<img src="/Content/images/products/main/Proizvod_3.png"/ style="margin: 30px 0px 0px 119px;">');
+                $('#prduct_descdiv').append('<p>The highest quantity. Of the highest quality.The App Store has the world’s largest collection of mobile apps. But it’s not just the number that’s impressive. It’s the kinds of apps you’ll find. iPhone apps offer a better experience because they take advantage of the technologies built into the device. And all those apps are in one place, so they’re easy to access, easy to search, +'
+                  + ' and easy to download — using the same Apple ID account you use on iTunes.</p>');
+                $('#prduct_thumbdiv').append('<img src="/Content/images/products/thumbs/Proizvod_3.1.png"/class="thumbs">');
+                $('#prduct_thumbdiv').append('<img src="/Content/images/products/thumbs/Proizvod_3.2.png"/class="thumbs" style="margin-left:38px;">');
+                $('#prduct_thumbdiv').append('<img src="/Content/images/products/thumbs/Proizvod_3.3.png"/class="thumbs" style="margin-left:38px;">');
             }
            
         }

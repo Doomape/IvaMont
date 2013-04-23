@@ -45,7 +45,7 @@ table {
 body {
     background-color: #4c4c4c;
 }
-header {
+#header {
     margin:auto;
     width:1024px;
     height:222px;
@@ -57,7 +57,7 @@ header {
     width:1024px;
 }
 
-footer {
+#footer {
       margin:auto;
       width:1024px;
       height:45px;
@@ -124,11 +124,12 @@ footer {
     margin-top: 61px;
     height: 201px;
     width: 248px;
+    color:white;
 }
 
 #homeServices_title a {
         margin-top: 24px;
-        margin-left: 75px;
+        margin-left: 85px;
         display: block;
         color:white;
         text-decoration:none;
@@ -191,11 +192,13 @@ footer {
     font-size:14px;
 }
     #design_info a {
+     color:rgb(180, 173, 173);
+     text-decoration:none;
+    }
+    #design_info a:hover {
      color:white;
      text-decoration:none;
     }
-
-
 
 
 
@@ -205,7 +208,7 @@ footer {
 
 #product {
     width:1024px;
-    height:501px;
+    min-height:501px;
     margin: 90px 0px 0px 0px;
 }
 
@@ -247,7 +250,7 @@ footer {
 
 #prduct_maindiv {
      width:984px;
-    height:480px;
+    height:501px;
     margin: 90px 0px 0px 0px;
      border: 3px solid #717171;
     background: #4c4c4c;

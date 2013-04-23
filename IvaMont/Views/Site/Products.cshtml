@@ -18,7 +18,7 @@
     </div>
     <div class="imgOutside">
         <a href="">
-        <div class="imgInside">
+        <div class="imgInside" onclick="productDetails('tomi')">
                 <img src="/Content/images/products/Proizvod_2.png" >
         </div>
         </a>
@@ -43,9 +43,7 @@
 <script type="text/javascript">
         function productDetails(e) {
             $('#product').empty();
-            $('#product').append('<div id="prduct_desc"><div>tomi</div></div>');
-                //('<div style=" width:1024px;height:480px;margin: 90px 0px 0px 0px;border: 3px solid #717171;background: #4c4c4c;"></div>');
-
+            $('#product').append('<div id="prduct_maindiv"><div>tomi</div></div>');
             $('#product').append(e);
             if (e == 'kokiii') {
                 $('#koki').append('<div style="width:100px;height:100px;background-color:white;"></div>');

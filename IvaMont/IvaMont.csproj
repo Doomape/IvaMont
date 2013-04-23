@@ -129,6 +129,10 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\images\products\product_footer.png" />
+    <Content Include="Content\images\products\Proizvod_1.png" />
+    <Content Include="Content\images\products\Proizvod_2.png" />
+    <Content Include="Content\images\products\Proizvod_3.png" />
     <Content Include="Content\images\siteImages\contentHomepage.png" />
     <Content Include="Content\images\siteImages\footerBackground.png" />
     <Content Include="Content\images\siteImages\headerBackground.gif" />

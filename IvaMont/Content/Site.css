@@ -327,3 +327,11 @@ body {
 .zaKoki {
 background:url(/Content/images/siteImages/back_arrows.png); width:100px;height:28px;float: left; margin-right: 10px;
 }
+
+*.unselectable {
+           -moz-user-select: -moz-none;
+           -khtml-user-select: none;
+           -webkit-user-select: none;
+           -ms-user-select: none;
+           user-select: none;
+        }

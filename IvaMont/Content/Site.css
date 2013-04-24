@@ -258,7 +258,7 @@ body {
 
 }
 #prduct_descdiv {
-    width:600px;
+    width:596px;
     height:501px;
     float:left;
 }
@@ -267,6 +267,8 @@ body {
     min-height:501px;
     background-image:url(/Content/images/siteImages/repeatPicture.gif);
     float:left;
+    border-left: 2px solid #717171;
+    border-right: 2px solid #717171;
 }
 #prduct_imgdiv {
     width:410px;
@@ -279,6 +281,7 @@ body {
     height: 100px;
     position: absolute;
     margin-top: 384px;
+    margin-left: 606px;
 }
 .thumbs {
     text-align: center;
@@ -294,3 +297,33 @@ body {
   {
   border:1px solid red;
   }
+
+#product_back {
+   height:50px;
+   margin-left:20px;
+   float:left;
+   width:550px;
+   margin-top: 19px;
+}
+
+#backimage {
+    width: 83px;
+    height: 30px;
+    cursor:pointer;
+}
+ #backimage:hover{
+        display:block;
+        background-position: 0px 86px;
+        z-index:1000;
+    }
+
+
+#product_text {
+    width:600px;
+    float:left;
+    height:400px;
+}
+
+.zaKoki {
+background:url(/Content/images/siteImages/back_arrows.png); width:100px;height:28px;float: left; margin-right: 10px;
+}

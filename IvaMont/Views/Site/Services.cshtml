@@ -2,10 +2,141 @@
     ViewBag.Title = "Services";
     Layout = "~/Views/Shared/SiteMaster.cshtml";
 }
+<style>
+    #main_container {
+        width: 1024px;
+        height: 650px;
+        position: relative;
+        margin-top: 30px;
+        /*letter-spacing: 1px;*/
+    }
 
-<div style="width:200px;height:200px; background:url('/Content/images/siteImages/repeatPicture.gif')">
+    .container_item_left {
+        border: 1px solid gray;
+        left: 80px;
+        position: absolute;
+        float: left;
+        width: 410px;
+        height: 300px;
+        background: url('/Content/images/siteImages/repeatPicture.gif');
+    }
+        .container_item_right {
+        border: 1px solid gray;
+        right: 80px;
+        position: absolute;
+        float: left;
+        width: 410px;
+        height: 300px;
+        background: url('/Content/images/siteImages/repeatPicture.gif');
+    }
+        .container_item_left_bottom {
+        top:330px;
+        border: 1px solid gray;
+        left: 80px;
+        position: absolute;
+        float: left;
+        width: 410px;
+        height: 300px;
+        background: url('/Content/images/siteImages/repeatPicture.gif');
+    }
+        .container_item_right_bottom {
+            top:330px;
+        border: 1px solid gray;
+        right: 80px;
+        position: absolute;
+        float: left;
+        width: 410px;
+        height: 300px;
+        background: url('/Content/images/siteImages/repeatPicture.gif');
+    }
+        .container_item_bottom{
+        border: 1px solid gray;
+       top:320px;left: 80px;
+        position: absolute;
+        float: left;
+        width: 862px;
+        height: 300px;
+        background: url('/Content/images/siteImages/repeatPicture.gif');
+    }
+    .container_items_front {
+        font-size: 17px;
+        font-weight: normal;
+        width: 388px;
+        height: 278px;
+        background-color: #4c4c4c;
+        margin-top: 10px;
+        margin-left: 10px;
+        border: 1px solid gray;
+        color: white;
+    }
 
-    <div style="width:100px;height:100px;background-color:white;"></div>
+    .lista {
+        padding-left: 30px;
+        font-size: 16px;
+        font-weight: normal;
+        margin-top:5px;
+    }
+</style>
+<div id="main_container">
+    <div class="container_item_left">
+
+        <div class="container_items_front">
+            <div style="margin-top: 10px;margin-left: 10px;">
+                <h4 style="font-weight: normal;font-size: 17px;">Сервисирање и оддржување на парни и топловодни котли</h4>
+                <ul class="lista">
+                    <li>Сервисирање на пламеници со оптимално подесување на согорување</li>
+                    <li>Санкција на екрански цевни системи</li>
+                    <li>Ремонт на пумпи и вентилатори</li>
+                    <li>Репарација на вентили и водоказни стакла</li>
+                    <li>Шамотирање на огревни површини</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="container_item_right">
+
+        <div class="container_items_front">
+            <div style="margin-top: 10px;margin-left: 10px;">
+                <h4 style="font-weight: normal;font-size: 17px;">Хемиско и механичко чистење на парни и топловодни котли</h4>
+                <ul class="lista">
+                    <li>Хемиско чистење од водена страна (каменец и минерални наслаги)</li>
+                    <li>Хемиско чистење од гасна страна</li>
+                    <li>Механичко чистење од гасна страна</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="container_item_left_bottom">
+
+        <div class="container_items_front">
+            <div style="margin-top: 10px;margin-left: 10px;">
+                <h4 style="font-weight: normal;font-size: 17px;">Сервисирање и оддржување на парни и топловодни котли</h4>
+                <ul class="lista">
+                    <li>Сервисирање на пламеници со оптимално подесување на согорување</li>
+                    <li>Санкција на екрански цевни системи</li>
+                    <li>Ремонт на пумпи и вентилатори</li>
+                    <li>Репарација на вентили и водоказни стакла</li>
+                    <li>Шамотирање на огревни површини</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="container_item_right_bottom">
+
+        <div class="container_items_front">
+            <div style="margin-top: 10px;margin-left: 10px;">
+                <h4 style="font-weight: normal;font-size: 17px;">Хемиско и механичко чистење на парни и топловодни котли</h4>
+                <ul class="lista">
+                    <li>Хемиско чистење од водена страна (каменец и минерални наслаги)</li>
+                    <li>Хемиско чистење од гасна страна</li>
+                    <li>Механичко чистење од гасна страна</li>
+                </ul>
+            </div>
+        </div>
+    </div>
 
 </div>
 

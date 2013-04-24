@@ -27,7 +27,7 @@ body {
 	line-height: 1;
 }
 ol, ul {
-	list-style: none;
+	/*list-style: none;*/
 }
 blockquote, q {
 	quotes: none;
@@ -294,3 +294,33 @@ body {
   {
   border:1px solid red;
   }
+
+#product_back {
+   height:50px;
+   margin-left:20px;
+   float:left;
+   width:550px;
+   margin-top: 19px;
+}
+
+#backimage {
+    width: 83px;
+    height: 30px;
+    cursor:pointer;
+}
+ #backimage:hover{
+        display:block;
+        background-position: 0px 86px;
+        z-index:1000;
+    }
+
+
+#product_text {
+    width:600px;
+    float:left;
+    height:400px;
+}
+
+.zaKoki {
+background:url(/Content/images/siteImages/back_arrows.png); width:100px;height:28px;float: left; margin-right: 10px;
+}

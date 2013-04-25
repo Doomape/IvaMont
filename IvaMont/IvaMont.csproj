@@ -129,6 +129,8 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\images\favicon.ico" />
+    <Content Include="Content\images\IvaMont_logo.ico" />
     <Content Include="Content\images\navbuttons.png" />
     <Content Include="Content\images\products\main\Proizvod_1.2.png" />
     <Content Include="Content\images\products\main\Proizvod_1.3.png" />
@@ -151,10 +153,6 @@
     <Content Include="Content\images\products\thumbs\Proizvod_3.2.png" />
     <Content Include="Content\images\products\thumbs\Proizvod_3.3.png" />
     <Content Include="Content\images\siteImages\back_arrows.png" />
-    <Content Include="Content\images\siteImages\back_arrow_black.png" />
-    <Content Include="Content\images\siteImages\back_arrow_red.png" />
-    <Content Include="Content\images\siteImages\back_arrow_silver.png" />
-    <Content Include="Content\images\siteImages\back_arrow_white.png" />
     <Content Include="Content\images\siteImages\repeatPicture.gif" />
     <Content Include="Content\images\siteImages\contentHomepage.png" />
     <Content Include="Content\images\siteImages\footerBackground.png" />
@@ -222,6 +220,7 @@
     <None Include="Scripts\jquery.validate-vsdoc.js" />
     <Content Include="Scripts\jquery-ui-1.8.20.js" />
     <Content Include="Scripts\jquery-ui-1.8.20.min.js" />
+    <Content Include="Scripts\jquery.nicescroll.js" />
     <Content Include="Scripts\jquery.tools.min.js" />
     <Content Include="Scripts\jquery.unobtrusive-ajax.js" />
     <Content Include="Scripts\jquery.unobtrusive-ajax.min.js" />

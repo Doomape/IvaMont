@@ -40,8 +40,10 @@
 </div>
 
 <script type="text/javascript">
+
         function productDetails(e) {
             $('#product').empty();
+            $('#product').css('min-height', '501px');
             var pom = "<div id='prduct_maindiv'><div id='prduct_descdiv'><div id='product_back'><a href='/Site/Products/'><div id='backimage'class='zaKoki'></div></a></div><div id='product_text'></div></div>"
                + "<div id='product_middle_line'></div><div id='prduct_imgdiv'></div><div id='prduct_thumbdiv'></div></div>";
             $('#product').append(pom);

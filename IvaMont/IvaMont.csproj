@@ -131,6 +131,7 @@
   <ItemGroup>
     <Content Include="Content\images\favicon.ico" />
     <Content Include="Content\images\IvaMont_logo.ico" />
+    <Content Include="Content\images\loader.gif" />
     <Content Include="Content\images\navbuttons.png" />
     <Content Include="Content\images\products\main\Proizvod_1.2.png" />
     <Content Include="Content\images\products\main\Proizvod_1.3.png" />

@@ -3,4 +3,158 @@
     Layout = "~/Views/Shared/SiteMaster.cshtml";
 }
 
-<h2>Contact</h2>
+<div id="contact">
+
+    <div id="contact_addres">
+     
+        <table style="line-height: 1.2em; text-align: left">
+
+            <tr>
+                <td>
+                    <p class="info">Адреса</p>
+                </td>
+            </tr>
+            <tr>
+                <td>ул.Божин Николов бр.36</td>
+            </tr>
+            <tr>
+                <td>1000 Скопје</td>
+            </tr>
+           @* <tr>
+                <td>R.Macedonia</td>
+            </tr>*@
+
+        </table>
+        <table style="line-height: 1.2em; text-align: left">
+            <tr>
+                <td>
+                    <p class="info" style="margin-top: 10px;">Телефон/Факс</p>
+                </td>
+            </tr>
+            <tr>
+                <td>+389 02/2439-081</td>
+            </tr>
+            <tr>
+                <td>+389 070/239-581</td>
+            </tr>
+            <tr>
+                <td>
+                        <p class="info" style="margin-top: 10px;">Електронска пошта</p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p>ivamontskopje@yahoo.com</p>
+                </td>   
+            </tr>
+            <tr>
+                <td>
+                        <p class="info" style="margin-top: 10px;">Жиро сметки</p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p>Стопанска банка АД Скопје: 200000012548494</p>
+                </td>   
+            </tr>
+        </table>
+    </div>
+    <div id="contact_contact">
+                <div style="margin: auto; height: 377px; margin-top: 11px;-webkit-border-radius: 5px; -moz-border-radius: 5px; border-radius: 5px;">
+                    <p id="succesed_msg" style =" display: none; position: absolute; text-align:center;margin-top: 150px; margin-left: 86px; color:white; font-family:sans-serif ">
+                        Your message has been sent
+                    </p>
+                <div class="contact_form">
+                    <ul class="inputs">
+                        <li>
+                            <label for="name">Name or Company:</label>
+                            <input id="ime" type="text" class="contact_input" placeholder="John Doe" required />
+                        </li>
+                   
+                        <li>
+                            <label for="email">Email:</label>
+                            <input id="email" type="email" class="contact_input" name="email" placeholder="john_doe@example.com" required />
+                            <span class="form_hint">Proper format "name@something.com"</span>
+                        </li>
+                        <li>
+                            <label for="number">Number:</label>
+                            <input id="broj" type="number" class="contact_input" name="website" placeholder="number" />
+
+                        </li>
+                        <li>
+                            <label for="message">Message:</label>
+                            <textarea id="poraka" class="contact_input" name="message" cols="40" rows="6" required></textarea>
+                        </li>
+                        <li>
+                            <button class="submit" type="button">Send</button>
+                        </li>
+                    </ul>
+
+                </div>
+                    </div>     
+            <a href="javascript:void(0);"><div id="mail_form"></div></a>
+    </div>
+    <div id="contact_mapcontainer">
+
+    </div>
+
+    <script>
+        function isNumber(n) {
+            return !isNaN(parseFloat(n)) && isFinite(n);
+        }
+        $("input[id='broj']").keyup(function () {
+            if ($("input[id='broj']") != "" && isNumber($("input[id='broj']").val())) {
+                document.getElementById("broj").required = true;
+            }
+            else
+                document.getElementById("broj").required = false;
+        });
+        function setInputsnull() {
+            $('.inputs input').attr('value', '');
+            $('.inputs textarea').attr('value', '');
+        }
+        $('.submit').click(function () {
+            var name = $('#ime').val();
+            var email = $('#email').val();
+            var number = $('#broj').val();
+            var message = $('#poraka').val();
+            var required_inputs = new Array();
+            for (var i = 0; i < $(".contact_input").length; i++) {
+                if ($($(".contact_input")[i]).attr('required')) {
+                    required_inputs.push($($(".contact_input")[i]));
+                }
+            }
+            var pom = false;
+
+            for (var j = 0; j < required_inputs.length; j++) {
+                if (required_inputs[j].val() == "")
+                    pom = true;
+            }
+            if (pom == false) {
+                $.ajax({
+                    url: "/Site/Sendform",
+                    type: "GET",
+                    data: {
+
+                        ime: name,
+                        broj: number,
+                        email: email,
+                        poraka: message,
+                    },
+                    success: function (result) {
+                        //alert(result.msg);
+                        $(".contact_form").fadeOut(700);
+                        setTimeout(function () { $("#succesed_msg").css("display", "block"); }, 700);
+                        setTimeout(function () { hiddenContent1.slideUp(2000); }, 1000);
+                        setInputsnull();
+                    }
+                });
+            } else {
+                alert("Enter the required values");
+            }
+        });
+    </script>
+
+
+
+</div>

@@ -150,7 +150,7 @@ body {
     float:right;
 }
 
-#menu_head {
+.menu_head {
     width:390px;
     height:70px;
 }
@@ -160,24 +160,24 @@ body {
     height:152px;
 }
 
-#menu_list {
+.menu_list {
     position: relative;
     top: 70px;
     left: 40px;
     color:white;
 }
 
-    #menu_list li {
+    .menu_list li {
         display:inline;
         float:left
         
     }
-        #menu_list li a {
+        .menu_list li a {
         color:white;
         text-decoration:none;
         
         }
-        #menu_list li a:hover {
+        .menu_list li a:hover {
         color:white;
         text-decoration:none;
         color:red;

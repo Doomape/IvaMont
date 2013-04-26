@@ -2,6 +2,7 @@
     ViewBag.Title = "Contact";
     Layout = "~/Views/Shared/SiteMaster.cshtml";
 }
+<script src="http://maps.google.com/maps/api/js?sensor=false" type="text/javascript"></script>
 
 <div id="contact">
 
@@ -61,44 +62,56 @@
     </div>
     <div id="contact_contact">
                 <div style="margin: auto; height: 377px; margin-top: 11px;-webkit-border-radius: 5px; -moz-border-radius: 5px; border-radius: 5px;">
-                    <p id="succesed_msg" style =" display: none; position: absolute; text-align:center;margin-top: 150px; margin-left: 86px; color:white; font-family:sans-serif ">
-                        Your message has been sent
-                    </p>
+                  
                 <div class="contact_form">
                     <ul class="inputs">
                         <li>
-                            <label for="name">Name or Company:</label>
-                            <input id="ime" type="text" class="contact_input" placeholder="John Doe" required />
+                            <label for="name">Име и презиме/Фирма:</label>
+                            <input id="ime" type="text" class="contact_input" placeholder="ИваМонт" required />
                         </li>
                    
                         <li>
-                            <label for="email">Email:</label>
-                            <input id="email" type="email" class="contact_input" name="email" placeholder="john_doe@example.com" required />
-                            <span class="form_hint">Proper format "name@something.com"</span>
+                            <label for="email">Електронска пошта:</label>
+                            <input id="email" type="email" class="contact_input" name="email" placeholder="ivamont@example.com" required />
                         </li>
                         <li>
-                            <label for="number">Number:</label>
-                            <input id="broj" type="number" class="contact_input" name="website" placeholder="number" />
+                            <label for="number">Телефонски број:</label>
+                            <input id="broj" type="number" class="contact_input" name="website" placeholder="број" />
 
                         </li>
                         <li>
-                            <label for="message">Message:</label>
+                            <label for="message">Порака:</label>
                             <textarea id="poraka" class="contact_input" name="message" cols="40" rows="6" required></textarea>
                         </li>
                         <li>
-                            <button class="submit" type="button">Send</button>
+                            <button class="submit" type="button">Испрати</button>
                         </li>
                     </ul>
 
                 </div>
                     </div>     
             <a href="javascript:void(0);"><div id="mail_form"></div></a>
+        <div id="messageSend" style="display:none; color: white; position: absolute; margin: -31px 0px 0px 128px; ">Успешно испратена порака</div>
     </div>
     <div id="contact_mapcontainer">
 
+         <div style="width:314px;height:389px; float:left;color:#ffffff;background-color: #E5E3DF;border:1px solid #717171;border: #ffffff 10px;border-bottom: #ffffff 46px;border-style: solid;">
+            <div id="map" style="width: 314px;height: 389px; border:1px solid #717171;">
+            </div>
+            <input id="second_location" type="text" style="margin-top: 11px; width: 239px;" />
+            <input  id="button" type="button" onclick="calcRoute();" value="Внеси"/>
+            
+         </div> 
+         <div style="clear:both"></div>
+         <div style="float:right;width: 336px;color: white;" id="directionsPanel">
+            </div>
+
     </div>
 
-    <script>
+    <script type="text/javascript">
+
+        //CONTAT FORM START
+
         function isNumber(n) {
             return !isNaN(parseFloat(n)) && isFinite(n);
         }
@@ -114,6 +127,7 @@
             $('.inputs textarea').attr('value', '');
         }
         $('.submit').click(function () {
+            $('#messageSend').css('display', 'none');
             var name = $('#ime').val();
             var email = $('#email').val();
             var number = $('#broj').val();
@@ -143,16 +157,103 @@
                     },
                     success: function (result) {
                         //alert(result.msg);
-                        $(".contact_form").fadeOut(700);
-                        setTimeout(function () { $("#succesed_msg").css("display", "block"); }, 700);
-                        setTimeout(function () { hiddenContent1.slideUp(2000); }, 1000);
-                        setInputsnull();
+                        $('#messageSend').css('display', 'block');
                     }
                 });
             } else {
                 alert("Enter the required values");
             }
         });
+
+        //CONTAT FORM END
+
+
+        //GOOGLE MAP START
+        $("#second_location").keypress(function (event) {
+            if (event.which == 13) {
+                event.preventDefault();
+                calcRoute();
+            }
+        });
+
+        function loadscroll() {
+
+            //load InitilizeMap
+            if (window.addEventListener) // W3C standard
+            {
+                window.addEventListener('load', InitializeMap, false); // NB **not** 'onload'
+            }
+            else if (window.attachEvent) // Microsoft
+            {
+                window.attachEvent('onload', InitializeMap);
+            }
+        }
+
+
+        function InitializeMap() {
+
+            directionsService = new google.maps.DirectionsService();
+            directionsDisplay = new google.maps.DirectionsRenderer();
+
+            var latlng = new google.maps.LatLng(41.967703, 21.485999);
+
+            var myOptions = {
+                zoom: 15,
+                center: latlng,
+                mapTypeId: google.maps.MapTypeId.ROADMAP,
+                navigationControl: true
+
+            };
+            var map = new google.maps.Map(document.getElementById("map"), myOptions);
+
+            var image = '/Content/images/ivamont_map.png';
+            marker = new google.maps.Marker
+            (
+                {
+
+                    position: new google.maps.LatLng(41.967703, 21.485999),
+                    map: map,
+                    icon: image,
+                    title: 'Click me'
+
+                }
+            );
+
+            var infowindow = new google.maps.InfoWindow({
+                content: 'Локација: ИваМонт'
+
+            });
+
+            google.maps.event.addListener(marker, 'click', function () {
+                // Calling the open method of the infoWindow 
+                infowindow.open(map, marker);
+            });
+
+            directionsDisplay.setMap(map);
+            directionsDisplay.setPanel(document.getElementById("directionsPanel"));
+        }
+
+        function calcRoute() {
+
+
+            var start = document.getElementById('second_location').value;
+
+            var request = {
+                origin: start,
+                destination: "41.935595,21.525618",
+                travelMode: google.maps.DirectionsTravelMode.DRIVING
+            };
+            directionsService.route(request, function (result, status) {
+                if (status == google.maps.DirectionsStatus.OK) {
+                    directionsDisplay.setDirections(result);
+                }
+            });
+        }
+        window.onload = loadscroll();
+
+        //GOOGLE MAP END
+
+
     </script>
 
 

@@ -62,8 +62,7 @@ body {
       width:1024px;
       height:45px;
       background: url('/Content/images/siteImages/footerBackground.png');
-      float:left;
-      margin-left: 166px;
+      clear: both;
 }
 
 #homeContent {
@@ -103,7 +102,7 @@ body {
         font-size:23px;
     }
         #homeProducts_title a:hover {
-            color:red;
+            color:#ff776b;
         }
 #homeServices {
     position:relative;
@@ -138,7 +137,7 @@ body {
         font-size:23px;
 }
         #homeServices_title a:hover {
-            color:red;
+            color:#ff776b;
         }
 #logo {
     float:left;
@@ -182,7 +181,7 @@ body {
         .menu_list li a:hover {
         color:white;
         text-decoration:none;
-        color:red;
+        color:#ff776b;
         }
 
 #design_info {
@@ -237,7 +236,7 @@ body {
   }
 .imgInside:hover
   {
-  border:2px solid #ff0000;
+  border:2px solid #ff776b;
   }
 .desc
   {
@@ -295,7 +294,7 @@ body {
 
 .thumbs:hover
   {
-  border:1px solid red;
+  border:1px solid #ff776b;
   }
 
 #product_back {
@@ -342,16 +341,16 @@ background:url(/Content/images/siteImages/back_arrows.png); width:100px;height:2
 #contact {
 
     width:1024px;
-    min-height:501px;
+   min-height: 460px;
     margin-left: 36px;
-    margin-top: 54px;
+    margin-top: 30px;
 }
 
 #contact_addres {
    /*position: absolute;
    top: 18%;*/
    width:240px;
-    min-height:501px;
+   min-height: 460px;
    float:left;
    font-family: Consolas;
    font-size: 15px;
@@ -371,13 +370,15 @@ background:url(/Content/images/siteImages/back_arrows.png); width:100px;height:2
 
 #contact_contact {
     width:376px;
-     min-height:501px;
+    min-height: 460px;
     float:left;
+    font-family: Consolas;
+    font-size:16px;
 }
 
 #contact_mapcontainer {
     width:335px;
-    min-height:501px;
+    min-height: 460px;
     float:left;
 }
 
@@ -436,7 +437,7 @@ input[type=number]::-webkit-outer-spin-button {
 
 /* === Form Elements === */
 .contact_form label {
-	width:156px;
+	width:200px;
 	margin-top: 3px;
 	display:inline-block;
 	float:left;

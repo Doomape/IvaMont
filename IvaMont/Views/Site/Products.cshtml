@@ -41,85 +41,122 @@
 
 <script type="text/javascript">
 
-        function productDetails(e) {
-            $('#product').empty();
-            $('#product').css('min-height', '501px');
-            var pom = "<div id='prduct_maindiv'><div id='prduct_descdiv'><div id='product_back'><a href='/Site/Products/'><div id='backimage'class='zaKoki'></div></a></div><div id='product_text'></div></div>"
-               + "<div id='product_middle_line'></div><div id='prduct_imgdiv'></div><div id='prduct_thumbdiv'></div></div>";
-            $('#product').append(pom);
-            if (e == 'Proizvod1') {
-                $('#prduct_imgdiv').append('<img src="/Content/images/products/main/Proizvod_1.png" style="margin: 30px 0px 0px 101px;">');
-                $('#product_text').append('<p>The highest quantity. Of the highest quality.The App Store has the world’s largest collection of mobile apps. But it’s not just the number that’s impressive. It’s the kinds of apps you’ll find. iPhone apps offer a better experience because they take advantage of the technologies built into the device. And all those apps are in one place, so they’re easy to access, easy to search, +'
-                +'and easy to download — using the same Apple ID account you use on iTunes.</p>');
-                $('#prduct_thumbdiv').append('<img src="/Content/images/products/thumbs/Proizvod_1_1.png"class="thumbs" onclick="productImages(\'' + "Proizvod1_1" + '\')">');
-                $('#prduct_thumbdiv').append('<img src="/Content/images/products/thumbs/Proizvod_1_2.png"class="thumbs" onclick="productImages(\'' + "Proizvod1_2" + '\')" style="margin-left:38px;">');
-                $('#prduct_thumbdiv').append('<img src="/Content/images/products/thumbs/Proizvod_1_3.png"class="thumbs" onclick="productImages(\'' + "Proizvod1_3" + '\')" style="margin-left:38px;">');
-            }
-            if (e == 'Proizvod2') {
-                $('#prduct_imgdiv').append('<img src="/Content/images/products/main/Proizvod_2.png" style="margin: 30px 0px 0px 27px;">');
-                $('#product_text').append('<p>The highest quantity. Of the highest quality.The App Store has the world’s largest collection of mobile apps. But it’s not just the number that’s impressive. It’s the kinds of apps you’ll find. iPhone apps offer a better experience because they take advantage of the technologies built into the device. And all those apps are in one place, so they’re easy to access, easy to search, +'
-                +'and easy to download — using the same Apple ID account you use on iTunes.</p>');
-                $('#prduct_thumbdiv').append('<img src="/Content/images/products/thumbs/Proizvod_2_1.png"class="thumbs" onclick="productImages(\'' + "Proizvod2_1" + '\')">');
-                $('#prduct_thumbdiv').append('<img src="/Content/images/products/thumbs/Proizvod_2_2.png"class="thumbs" onclick="productImages(\'' + "Proizvod2_2" + '\')" style="margin-left:38px;">');
-            }
-            if (e == 'Proizvod3') {
-                $('#prduct_imgdiv').append('<img src="/Content/images/products/main/Proizvod_3.png" style="margin: 30px 0px 0px 119px;">');
-                $('#product_text').append('<p>The highest quantity. Of the highest quality.The App Store has the world’s largest collection of mobile apps. But it’s not just the number that’s impressive. It’s the kinds of apps you’ll find. iPhone apps offer a better experience because they take advantage of the technologies built into the device. And all those apps are in one place, so they’re easy to access, easy to search, +'
-                +'and easy to download — using the same Apple ID account you use on iTunes.</p>');
-                $('#prduct_thumbdiv').append('<img src="/Content/images/products/thumbs/Proizvod_3_1.png" class="thumbs" onclick="productImages(\''+"Proizvod3_1"+'\')">');
-                $('#prduct_thumbdiv').append('<img src="/Content/images/products/thumbs/Proizvod_3_2.png" class="thumbs" onclick="productImages(\'' + "Proizvod3_2" + '\')" style="margin-left:38px;">');
-                $('#prduct_thumbdiv').append('<img src="/Content/images/products/thumbs/Proizvod_3_3.png" class="thumbs" onclick="productImages(\'' + "Proizvod3_3" + '\')" style="margin-left:38px;">');
+    function productDetails(e) {
+        $('#content').empty();
+        var pom = "<div style='width: 1024px;min-height:560px;position: relative;margin-top: 30px;'><div id='prduct_maindiv' style='margin-top:30px;'>"
+            + "<div id='prduct_descdiv'><div id='product_back'><a href='/Site/Products/'><div id='backimage'class='zaKoki'></div></a></div><div id='product_text'>"
+            + "</div></div>"
+           + "<div id='product_middle_line'></div><div id='prduct_imgdiv'>"
+           + "<div id='mainTopPicture' style='height:390px;width:410px;text-align:center;line-height:390px'><img id='loading' style='vertical-align:middle;background-repeat: no-repeat no-repeat;' src='/Content/images/loading_transparent.gif' /></div>"
+           + "</div><div id='prduct_thumbdiv'></div></div></div>";
 
-            }
-           
+        $('#content').append(pom);
+
+        if ($(document).height() > 768) {
+            $('body').css('overflow', 'auto');
+            $('body').niceScroll();
         }
 
-        function productImages(i) {
+        if (e == 'Proizvod1') {
 
-          
-            //Proizvod br 1
-
-            if (i == 'Proizvod1_1') {
-                $('#prduct_imgdiv').empty();
-                $('#prduct_imgdiv').append('<img src="/Content/images/products/main/Proizvod_1.png" style="margin: 30px 0px 0px 101px;">');
-
-            }
-            if (i == 'Proizvod1_2') {
-                $('#prduct_imgdiv').empty();
-                $('#prduct_imgdiv').append('<img src="/Content/images/products/main/Proizvod_1_2.png" style="margin: 30px 0px 0px 119px;">');
-            }
-            if (i == 'Proizvod1_3') {
-                $('#prduct_imgdiv').empty();
-                $('#prduct_imgdiv').append('<img src="/Content/images/products/main/Proizvod_1_3.png" style="margin: 30px 0px 0px 101px;">');
-            }
-
-            //Proizvod br 2
-
-            if (i == 'Proizvod2_1') {
-                $('#prduct_imgdiv').empty();
-                $('#prduct_imgdiv').append('<img src="/Content/images/products/main/Proizvod_2.png" style="margin: 30px 0px 0px 27px;">');
-
-            }
-            if (i == 'Proizvod2_2') {
-                $('#prduct_imgdiv').empty();
-                $('#prduct_imgdiv').append('<img src="/Content/images/products/main/Proizvod_2_1.png" style="margin: 30px 0px 0px 27px;">');
-            }
-
-            //Proizvod br 3
-
-            if (i == 'Proizvod3_1') {
-                $('#prduct_imgdiv').empty();
-                $('#prduct_imgdiv').append('<img src="/Content/images/products/main/Proizvod_3.png" style="margin: 30px 0px 0px 119px;">');
-
-            }
-            if (i == 'Proizvod3_2') {
-                $('#prduct_imgdiv').empty();
-                $('#prduct_imgdiv').append('<img src="/Content/images/products/main/Proizvod_3_2.png" style="margin: 30px 0px 0px 119px;">');
-            }
-            if (i == 'Proizvod3_3') {
-                $('#prduct_imgdiv').empty();
-                $('#prduct_imgdiv').append('<img src="/Content/images/products/main/Proizvod_3_3.png" style="margin: 30px 0px 0px 60px;">');
-            }
+            $("#prduct_imgdiv img").attr("src", '/Content/images/loading_transparent.gif');
+            var img = new Image();
+            img.src = "/Content/images/products/main/Proizvod_1.png";
+            $("#prduct_imgdiv img").attr("src", img.src);
+            $('#product_text').append('<p>The highest quantity. Of the highest quality.The App Store has the world’s largest collection of mobile apps. But it’s not just the number that’s impressive. It’s the kinds of apps you’ll find. iPhone apps offer a better experience because they take advantage of the technologies built into the device. And all those apps are in one place, so they’re easy to access, easy to search, +'
+            + 'and easy to download — using the same Apple ID account you use on iTunes.</p>');
+            $('#prduct_thumbdiv').append('<img src="/Content/images/products/thumbs/Proizvod_1_1.png"class="thumbs" onclick="productImages(\'' + "Proizvod1_1" + '\')">');
+            $('#prduct_thumbdiv').append('<img src="/Content/images/products/thumbs/Proizvod_1_2.png"class="thumbs" onclick="productImages(\'' + "Proizvod1_2" + '\')" style="margin-left:38px;">');
+            $('#prduct_thumbdiv').append('<img src="/Content/images/products/thumbs/Proizvod_1_3.png"class="thumbs" onclick="productImages(\'' + "Proizvod1_3" + '\')" style="margin-left:38px;">');
+        }
+        if (e == 'Proizvod2') {
+            $("#prduct_imgdiv img").attr("src", '/Content/images/loading_transparent.gif');
+            var img = new Image();
+            img.src = "/Content/images/products/main/Proizvod_2.png";
+            $("#prduct_imgdiv img").attr("src", img.src);
+            $('#product_text').append('<p>The highest quantity. Of the highest quality.The App Store has the world’s largest collection of mobile apps. But it’s not just the number that’s impressive. It’s the kinds of apps you’ll find. iPhone apps offer a better experience because they take advantage of the technologies built into the device. And all those apps are in one place, so they’re easy to access, easy to search, +'
+            + 'and easy to download — using the same Apple ID account you use on iTunes.</p>');
+            $('#prduct_thumbdiv').append('<img src="/Content/images/products/thumbs/Proizvod_2_1.png"class="thumbs" onclick="productImages(\'' + "Proizvod2_1" + '\')">');
+            $('#prduct_thumbdiv').append('<img src="/Content/images/products/thumbs/Proizvod_2_2.png"class="thumbs" onclick="productImages(\'' + "Proizvod2_2" + '\')" style="margin-left:38px;">');
+        }
+        if (e == 'Proizvod3') {
+            $("#prduct_imgdiv img").attr("src", '/Content/images/loading_transparent.gif');
+            var img = new Image();
+            img.src = "/Content/images/products/main/Proizvod_3.png";
+            $("#prduct_imgdiv img").attr("src", img.src);
+            $('#product_text').append('<p>The highest quantity. Of the highest quality.The App Store has the world’s largest collection of mobile apps. But it’s not just the number that’s impressive. It’s the kinds of apps you’ll find. iPhone apps offer a better experience because they take advantage of the technologies built into the device. And all those apps are in one place, so they’re easy to access, easy to search, +'
+            + 'and easy to download — using the same Apple ID account you use on iTunes.</p>');
+            $('#prduct_thumbdiv').append('<img src="/Content/images/products/thumbs/Proizvod_3_1.png" class="thumbs" onclick="productImages(\'' + "Proizvod3_1" + '\')">');
+            $('#prduct_thumbdiv').append('<img src="/Content/images/products/thumbs/Proizvod_3_2.png" class="thumbs" onclick="productImages(\'' + "Proizvod3_2" + '\')" style="margin-left:38px;">');
+            $('#prduct_thumbdiv').append('<img src="/Content/images/products/thumbs/Proizvod_3_3.png" class="thumbs" onclick="productImages(\'' + "Proizvod3_3" + '\')" style="margin-left:38px;">');
 
         }
+
+    }
+
+    function productImages(i) {
+
+
+        //Proizvod br 1
+
+        if (i == 'Proizvod1_1') {
+            $("#prduct_imgdiv img").attr("src", '/Content/images/loading_transparent.gif');
+            var img = new Image();
+            img.src = "/Content/images/products/main/Proizvod_1.png";
+            $("#prduct_imgdiv img").attr("src", img.src);
+
+
+        }
+        if (i == 'Proizvod1_2') {
+            $("#prduct_imgdiv img").attr("src", '/Content/images/loading_transparent.gif');
+            var img = new Image();
+            img.src = "/Content/images/products/main/Proizvod_1_2.png";
+            $("#prduct_imgdiv img").attr("src", img.src);
+        }
+        if (i == 'Proizvod1_3') {
+            $("#prduct_imgdiv img").attr("src", '/Content/images/loading_transparent.gif');
+            var img = new Image();
+            img.src = "/Content/images/products/main/Proizvod_1_3.png";
+            $("#prduct_imgdiv img").attr("src", img.src);
+        }
+
+        //Proizvod br 2
+
+        if (i == 'Proizvod2_1') {
+            $("#prduct_imgdiv img").attr("src", '/Content/images/loading_transparent.gif');
+            var img = new Image();
+            img.src = "/Content/images/products/main/Proizvod_2.png";
+            $("#prduct_imgdiv img").attr("src", img.src);
+
+        }
+        if (i == 'Proizvod2_2') {
+            $("#prduct_imgdiv img").attr("src", '/Content/images/loading_transparent.gif');
+            var img = new Image();
+            img.src = "/Content/images/products/main/Proizvod_2_1.png";
+            $("#prduct_imgdiv img").attr("src", img.src);
+        }
+
+        //Proizvod br 3
+
+        if (i == 'Proizvod3_1') {
+            $("#prduct_imgdiv img").attr("src", '/Content/images/loading_transparent.gif');
+            var img = new Image();
+            img.src = "/Content/images/products/main/Proizvod_3.png";
+            $("#prduct_imgdiv img").attr("src", img.src);
+
+        }
+        if (i == 'Proizvod3_2') {
+            $("#prduct_imgdiv img").attr("src", '/Content/images/loading_transparent.gif');
+            var img = new Image();
+            img.src = "/Content/images/products/main/Proizvod_3_2.png";
+            $("#prduct_imgdiv img").attr("src", img.src);
+        }
+        if (i == 'Proizvod3_3') {
+            $("#prduct_imgdiv img").attr("src", '/Content/images/loading_transparent.gif');
+            var img = new Image();
+            img.src = "/Content/images/products/main/Proizvod_3_3.png";
+            $("#prduct_imgdiv img").attr("src", img.src);
+        }
+
+    }
 </script>

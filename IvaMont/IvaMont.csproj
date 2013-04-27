@@ -159,6 +159,15 @@
     <Content Include="Content\images\products\thumbs\Proizvod_3.1.png" />
     <Content Include="Content\images\products\thumbs\Proizvod_3.2.png" />
     <Content Include="Content\images\products\thumbs\Proizvod_3.3.png" />
+    <Content Include="Content\images\products\thumbs\Proizvod_1_1.png" />
+    <Content Include="Content\images\products\thumbs\Proizvod_1_2.png" />
+    <Content Include="Content\images\products\thumbs\Proizvod_1_3.png" />
+    <Content Include="Content\images\products\thumbs\Proizvod_2_1.png" />
+    <Content Include="Content\images\products\thumbs\Proizvod_2_2.png" />
+    <Content Include="Content\images\products\thumbs\Proizvod_3_1.png" />
+    <Content Include="Content\images\products\thumbs\Proizvod_3_2.png" />
+    <Content Include="Content\images\products\thumbs\Proizvod_3_3.png" />
+    <Content Include="Content\images\sample2.gif" />
     <Content Include="Content\images\red_asterisk.png" />
     <Content Include="Content\images\sample2.gif" />
     <Content Include="Content\images\siteImages\back_arrows.png" />

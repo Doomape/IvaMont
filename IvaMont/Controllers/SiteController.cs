@@ -69,10 +69,6 @@ namespace IvaMont.Controllers
             }
         }
 
-        public ActionResult PartialConsoleWindow()
-        {
-            return View("PartialConsoleWindow");
-        }
 
 
         public JsonResult Sendform(string ime, string broj, string email, string poraka)

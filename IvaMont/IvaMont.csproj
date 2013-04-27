@@ -131,7 +131,14 @@
   <ItemGroup>
     <Content Include="Content\images\clients\alkaloid_skopje.png" />
     <Content Include="Content\images\clients\cementarnica_usje.png" />
+    <Content Include="Content\images\clients\fructal.png" />
+    <Content Include="Content\images\clients\johnson_matthey.png" />
+    <Content Include="Content\images\clients\krka_farma.png" />
+    <Content Include="Content\images\clients\makedonija_turist.png" />
+    <Content Include="Content\images\clients\rz_institut.png" />
     <Content Include="Content\images\clients\tikves_kavadarci.png" />
+    <Content Include="Content\images\clients\tkp_prilep.png" />
+    <Content Include="Content\images\clients\zitoleb.png" />
     <Content Include="Content\images\favicon.ico" />
     <Content Include="Content\images\invalid.png" />
     <Content Include="Content\images\IvaMont_logo.ico" />

@@ -454,13 +454,13 @@ input[type=number]::-webkit-outer-spin-button {
 	width:200px; 
 	padding:5px 8px;
 }
-.contact_form textarea {padding:0px; width:260px;}
+.contact_form textarea {padding:0px; width:260px;height:136px}
 .contact_form button {margin-left:0px;margin-top: 11px;}
 
 	/* form element visual styles */
 	.contact_form input, .contact_form textarea { 
 		border:1px solid #aaa;
-		box-shadow: 0px 0px 3px #ccc, 0 10px 15px #eee inset;
+		/*box-shadow: 0px 0px 3px #ccc, 0 10px 15px #eee inset;*/
 		border-radius:2px;
 		padding-right:30px;
 		-moz-transition: padding .25s; 

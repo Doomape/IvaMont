@@ -3,4 +3,76 @@
     Layout = "~/Views/Shared/SiteMaster.cshtml";
 }
 
-<h2>Clients</h2>
+@{
+    ViewBag.Title = "Services";
+    Layout = "~/Views/Shared/SiteMaster.cshtml";
+}
+<style>
+    #main_container {
+        width: 1024px;
+        height: 650px;
+        position: relative;
+        margin-top: 30px;
+        /*letter-spacing: 1px;*/
+
+    }
+
+    .container_item {
+        border: 1px solid gray;
+        left: 80px;
+        position: absolute;
+        float: left;
+        width: 282px;
+        height: 163px;
+        background: url('/Content/images/siteImages/repeatPicture.gif');
+    }
+
+    .container_items_front {
+        font-size: 17px;
+        font-weight: normal;
+        width: 260px;
+        height: 140px;
+        background-color: #4c4c4c;
+        margin-top: 10px;
+        margin-left: 10px;
+        border: 1px solid gray;
+        color: white;
+    }
+
+.image_center {
+        margin-top:10px;
+        margin-left: 10px;
+        text-align:center;
+
+    }
+</style>
+<div id="main_container">
+    <div class="container_item">
+
+        <div class="container_item">
+            <div class="image_center">
+                <img src="/Content/images/clients/alkaloid_skopje.png">
+            </div>
+        </div>
+    </div>
+
+    <div class="container_item">
+
+        <div class="container_items_front">
+            <div class="image_center">
+                <img src="/Content/images/clients/cementarnica_usje.png">
+            </div>
+        </div>
+    </div>
+
+    <div class="container_item">
+
+        <div class="container_items_front">
+            <div class="image_center">
+                <img src="/Content/images/clients/tikves_kavadarci.png">
+            </div>
+        </div>
+    </div>
+
+</div>
+

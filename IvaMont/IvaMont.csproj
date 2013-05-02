@@ -175,6 +175,7 @@
     <Content Include="Content\images\siteImages\footerBackground.png" />
     <Content Include="Content\images\siteImages\headerBackground.gif" />
     <Content Include="Content\images\siteImages\headerBackground.png" />
+    <Content Include="Content\images\about.png" />
     <Content Include="Content\images\valid.png" />
     <Content Include="Content\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
     <Content Include="Content\themes\base\images\ui-bg_flat_75_ffffff_40x100.png" />
